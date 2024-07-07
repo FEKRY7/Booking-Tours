@@ -8,7 +8,7 @@ const {SignUpSchema ,activateAcountSchema, signInSchema} = require('../auth/auth
 const {fileValidation,myMulter} = require('../../utilites/multer.js')
 
 router.post("/SignUp",
-// validation(SignUpSchema),
+validation(SignUpSchema),
 myMulter(fileValidation.image).array("photo"),
 SignUp
 )
